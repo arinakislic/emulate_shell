@@ -33,14 +33,15 @@
 bash
 ```
 git clone <URL-репозитория>
-cd shell-emulator
+cd emulate_shell
 ```
 
 ### Структура проекта
 text
 ```
-shell-emulator/
+emulate_shell/
 ├── README.md           # Документация проекта
 └── src/
     └── shell.py        # Основной исполняемый файл
 ```
+

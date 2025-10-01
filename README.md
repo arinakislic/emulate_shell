@@ -32,16 +32,9 @@
 ### Клонируйте репозиторий:
 bash
 ```
-git clone <URL-репозитория>
+git clone https://github.com/arinakislic/emulate_shell.git
 cd emulate_shell
 ```
+ 
 
-### Структура проекта
-text
-```
-emulate_shell/
-├── README.md           # Документация проекта
-└── src/
-    └── shell.py        # Основной исполняемый файл
-```
 

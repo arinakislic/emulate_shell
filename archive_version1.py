@@ -76,15 +76,18 @@ def execute_command(args):
     # Реализовать команды-заглушки, которые выводят свое имя и аргументы: ls, cd.
     elif command_name == "cd":
         # Команда смены директории
-        new_dir = args[1] if len(args) > 1 else os.getenv('HOME')
-        try:
-            os.chdir(new_dir)
-        except FileNotFoundError:
-            print(f"cd: no such file or directory: {new_dir}")
-        except NotADirectoryError:
-            print(f"cd: not a directory: {new_dir}")
-        except PermissionError:
-            print(f"cd: permission denied: {new_dir}")
+        if len(args) == 2:
+          new_dir = args[1] 
+          try:
+              os.chdir(new_dir)
+          except FileNotFoundError:
+              print(f"cd: no such file or directory: {new_dir}")
+          except NotADirectoryError:
+              print(f"cd: not a directory: {new_dir}")
+          except PermissionError:
+              print(f"cd: permission denied: {new_dir}")
+        elif len(args) > 2:
+          print(f"cd: too many arguments")
         # Заглушка: просто меняем директорию, вывод не требуется
 
     elif command_name == "ls":
